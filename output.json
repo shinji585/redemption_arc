@@ -1,0 +1,28 @@
+{
+    "names": [
+        "samuel",
+        "sebastian",
+        "santiago"
+    ],
+    "ages": [
+        21,
+        16,
+        16
+    ],
+    "nationalities": [
+        "Canadian",
+        "Colombian",
+        "German"
+    ],
+    "description": "They are brother that live in Colombian",
+    "goals": [
+        "Machine Learning Engineer",
+        "Business",
+        "Unknown"
+    ],
+    "montly payment": [
+        2000000.25,
+        125000,
+        300000
+    ]
+}

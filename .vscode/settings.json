@@ -1,0 +1,22 @@
+{
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none",
+        "reportAttributeAccessIssue": "none",
+        "reportCallIssue": "none",
+        "reportArgumentType": "none",
+        "reportGeneralTypeIssues": "none"
+    },
+
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.diagnosticMode": "openFilesOnly",
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    }
+}
