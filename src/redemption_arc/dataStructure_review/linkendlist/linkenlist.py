@@ -48,7 +48,7 @@ class SinglyLinkedlist[T]:
             self._tail = None
         else:
             self._head = self._head.next
-        self._size += 1
+        self._size -= 1
         return value
 
     def pop(self) -> T:
@@ -103,6 +103,27 @@ class SinglyLinkedlist[T]:
             new_nodo.next = current.next
             current.next = new_nodo
             self._size += 1 
+            
+            
+    def remove(self, index: int)  -> None | T: 
+        if index < 0 or index > self._size: 
+            return None 
+        
+        if index == 0: 
+            return self.prepop()
+        elif index == self._size: 
+            return self.pop()
+        else: 
+            prev: None | Nodo[T] = self.get(index=index - 1)
+            assert prev is not None 
+            current: None | Nodo[T] = prev.next
+            assert current is not None 
+            prev.next = current.next
+            current.next = None 
+            self._size -= 1
+            return current.data
+            
+    
         
     def __iter__(self) -> Generator[T, Any]:
         current: None | Nodo[T] = self._head
