@@ -123,7 +123,17 @@ class SinglyLinkedlist[T]:
             self._size -= 1
             return current.data
             
-    
+    def reverse(self) -> None: 
+        temp = self._head
+        self._head = self._tail
+        self._tail = temp
+        before = None 
+        for _ in range(self._size):
+            assert temp is not None 
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
         
     def __iter__(self) -> Generator[T, Any]:
         current: None | Nodo[T] = self._head
