@@ -9,7 +9,6 @@ def is_palindrome_version2(text: str) -> bool:
     if len(text) < 2: 
         return True
     
-    
     return text[0:] == text[::-1] 
     
 
